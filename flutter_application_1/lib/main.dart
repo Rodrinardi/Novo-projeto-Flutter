@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart'; // pacote de widgets para o android
+import 'package:flutter/material.dart';
+import 'package:flutter_application_1/tela2.dart'; // pacote de widgets para o android
 // função principal do aplicativo
 void main() {
   // runAPP função que constroi a tela do app
@@ -30,7 +31,9 @@ class Telaprincipal extends StatelessWidget {
           Container(color: Colors.blue,width: 400,height: 180,
           child: Text("Tela 1",style: TextStyle(fontSize:25 ),),),
           // child é a relação com 1 widgets
+          // Navigator.push permite chamer a tela 2 
           ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => TelaSecundaria(),));
 
           }, child: Text("Tela 2")),
         ],
