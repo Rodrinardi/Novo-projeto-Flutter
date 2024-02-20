@@ -31,9 +31,10 @@ class Telaprincipal extends StatelessWidget {
           Container(color: Colors.blue,width: 400,height: 180,
           child: Text("Tela 1",style: TextStyle(fontSize:25 ),),),
           // child é a relação com 1 widgets
-          // Navigator.push permite chamer a tela 2 
+          // Navigator.push permite chamer a tela 2 e MaterialPageRoute chama a tela seguinte
           ElevatedButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(builder: (context) => TelaSecundaria(),));
+            
 
           }, child: Text("Tela 2")),
         ],
