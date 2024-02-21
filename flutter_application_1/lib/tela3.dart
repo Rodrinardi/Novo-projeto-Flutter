@@ -1,22 +1,30 @@
-import 'package:flutter/material.dart';
 
-class TelaSecundaria extends StatelessWidget {
-  const TelaSecundaria({super.key});
+
+import 'package:flutter/material.dart';
+import 'package:flutter_application_1/tela4.dart';
+
+class Telaop extends StatelessWidget {
+  const Telaop({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Tela 2"),
+      title: Text("Tela opções"),
       ),
-      body: Column(children: [
-        Container(color: Colors.red,width: 400,height: 180,),
+     body: Column(
+      children: [
+        Container(color: Colors.black,width: 400,height: 180,),
         ElevatedButton(onPressed: (){
-          Navigator.pop(context);
-        }, child: Text("Tela 1")),
+        Navigator.pop(context);
+
+        }, child: Text("Tela 2")),
+        ElevatedButton(onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>telacontador()));
+
+        }, child: Text("Contador"))
       ],
-      
-      ),
+     ),
 
     );
   }
